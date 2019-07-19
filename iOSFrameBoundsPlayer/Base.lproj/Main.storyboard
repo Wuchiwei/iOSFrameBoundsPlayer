@@ -62,23 +62,17 @@
                                     <action selector="syncSliderValueWithTargetView" destination="BYZ-38-t0r" eventType="valueChanged" id="6lM-OF-DB9"/>
                                 </connections>
                             </segmentedControl>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1uh-Ym-yqf">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1uh-Ym-yqf">
                                 <rect key="frame" x="20" y="79" width="374" height="402"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AUC-wp-Noh">
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AUC-wp-Noh">
                                         <rect key="frame" x="137" y="151" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="2y0-vI-2st"/>
-                                            <constraint firstAttribute="height" constant="100" id="hRb-d9-LZz"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="AUC-wp-Noh" firstAttribute="centerY" secondItem="1uh-Ym-yqf" secondAttribute="centerY" id="Ork-St-V3c"/>
-                                    <constraint firstItem="AUC-wp-Noh" firstAttribute="centerX" secondItem="1uh-Ym-yqf" secondAttribute="centerX" id="vFs-lk-hrR"/>
-                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mkf-ac-uSp">
                                 <rect key="frame" x="20" y="578.5" width="51" height="21"/>
@@ -117,14 +111,11 @@
                             <constraint firstItem="EgT-Ne-5Tf" firstAttribute="top" secondItem="Mkf-ac-uSp" secondAttribute="bottom" constant="40" id="7TF-NX-OGU"/>
                             <constraint firstItem="8Zk-4j-83e" firstAttribute="leading" secondItem="SzY-xx-zy4" secondAttribute="leading" id="A6D-71-lii"/>
                             <constraint firstItem="sUk-e6-Xas" firstAttribute="top" secondItem="lBi-Ut-gtH" secondAttribute="bottom" constant="40" id="BIl-GS-ZvD"/>
-                            <constraint firstItem="1uh-Ym-yqf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="C1m-UG-ly2"/>
                             <constraint firstItem="JMQ-EY-V7d" firstAttribute="leading" secondItem="sUk-e6-Xas" secondAttribute="trailing" constant="20" id="CKW-Ps-RAW"/>
                             <constraint firstItem="00d-Ws-1Lt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="CkF-qO-OH0"/>
                             <constraint firstItem="EgT-Ne-5Tf" firstAttribute="leading" secondItem="sUk-e6-Xas" secondAttribute="leading" id="DA8-gk-Lls"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1uh-Ym-yqf" secondAttribute="trailing" constant="20" id="GXs-6z-ee9"/>
                             <constraint firstItem="Kfx-wT-3zg" firstAttribute="trailing" secondItem="8Zk-4j-83e" secondAttribute="trailing" id="Iol-7X-STy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JMQ-EY-V7d" secondAttribute="bottom" constant="75" id="MMp-oH-K8q"/>
-                            <constraint firstItem="00d-Ws-1Lt" firstAttribute="top" secondItem="1uh-Ym-yqf" secondAttribute="bottom" constant="30" id="Nho-vc-l3y"/>
                             <constraint firstItem="lBi-Ut-gtH" firstAttribute="leading" secondItem="sUk-e6-Xas" secondAttribute="leading" id="Q48-TT-lEF"/>
                             <constraint firstItem="rwc-kh-mFR" firstAttribute="leading" relation="lessThanOrEqual" secondItem="00d-Ws-1Lt" secondAttribute="trailing" constant="92" id="QJT-cZ-twB"/>
                             <constraint firstItem="Kfx-wT-3zg" firstAttribute="centerY" secondItem="Mkf-ac-uSp" secondAttribute="centerY" id="VlN-Hj-bCr"/>
@@ -137,7 +128,6 @@
                             <constraint firstItem="sUk-e6-Xas" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jJy-Uo-hnD"/>
                             <constraint firstItem="Kfx-wT-3zg" firstAttribute="leading" secondItem="8Zk-4j-83e" secondAttribute="leading" id="jMs-QQ-IbQ"/>
                             <constraint firstItem="Kfx-wT-3zg" firstAttribute="top" secondItem="00d-Ws-1Lt" secondAttribute="bottom" constant="35" id="pUc-FC-UFu"/>
-                            <constraint firstItem="1uh-Ym-yqf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="q6g-sK-3mT"/>
                             <constraint firstItem="SzY-xx-zy4" firstAttribute="trailing" secondItem="JMQ-EY-V7d" secondAttribute="trailing" id="rAU-9y-MC9"/>
                             <constraint firstItem="EgT-Ne-5Tf" firstAttribute="trailing" secondItem="sUk-e6-Xas" secondAttribute="trailing" id="rVz-kP-fzc"/>
                             <constraint firstItem="8Zk-4j-83e" firstAttribute="trailing" secondItem="SzY-xx-zy4" secondAttribute="trailing" id="twP-JD-k3R"/>
