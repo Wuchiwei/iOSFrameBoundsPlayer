@@ -21,34 +21,73 @@ class ViewController: UIViewController {
     @IBOutlet weak var ntuSuperView: UIView!
     @IBOutlet weak var ntuChildView: UIView!
     
+    var targetView: UIView {
+        
+        get {
+            
+            if viewSeletor.selectedSegmentIndex == 0 {
+                
+                return ntuSuperView
+            } else {
+                
+                return ntuChildView
+            }
+            
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        syncSliderValueWithTargetView()
+    }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        print("viewDidLayoutSubviews")
+    }
+    
+    @IBAction func syncSliderValueWithTargetView() {
+        
+        if frameBoundsSeletor.selectedSegmentIndex == 0 {
+            
+            xSlider.value = Float(targetView.frame.origin.x)
+            
+            ySlider.value = Float(targetView.frame.origin.y)
+            
+            widthSlider.value = Float(targetView.frame.size.width)
+            
+            heightSlider.value = Float(targetView.frame.size.height)
+            
+        } else {
+            
+            xSlider.value = Float(targetView.bounds.origin.x)
+            
+            ySlider.value = Float(targetView.bounds.origin.y)
+            
+            widthSlider.value = Float(targetView.bounds.size.width)
+            
+            heightSlider.value = Float(targetView.bounds.size.height)
+        }
+    }
+    
     //MARK: - Change X Value
     
     @IBAction func xValueDidChange(_ sender: UISlider) {
         
-        if viewSeletor.selectedSegmentIndex == 0 {
-            
-            changeXValue(ntuSuperView, to: CGFloat(sender.value))
-            
-        } else {
-            
-            changeXValue(ntuChildView, to: CGFloat(sender.value))
-        }
-    }
-    
-    func changeXValue(_ targetView: UIView, to value: CGFloat) {
-        
         if frameBoundsSeletor.selectedSegmentIndex == 0 {
             
-            targetView.frame.origin.x = value
+            targetView.frame.origin.x = CGFloat(sender.value)
             
         } else {
             
-            targetView.bounds.origin.x = value
+            targetView.bounds.origin.x = CGFloat(sender.value)
         }
     }
     
@@ -58,23 +97,11 @@ class ViewController: UIViewController {
         
         if viewSeletor.selectedSegmentIndex == 0 {
             
-            changeYValue(ntuSuperView, to: CGFloat(sender.value))
+            targetView.frame.origin.y = CGFloat(sender.value)
             
         } else {
             
-            changeYValue(ntuChildView, to: CGFloat(sender.value))
-        }
-    }
-    
-    func changeYValue(_ targetView: UIView, to value: CGFloat) {
-        
-        if frameBoundsSeletor.selectedSegmentIndex == 0 {
-            
-            targetView.frame.origin.y = value
-            
-        } else {
-            
-            targetView.bounds.origin.y = value
+            targetView.bounds.origin.x = CGFloat(sender.value)
         }
     }
     
@@ -84,23 +111,11 @@ class ViewController: UIViewController {
         
         if viewSeletor.selectedSegmentIndex == 0 {
             
-            changeWidthValue(ntuSuperView, to: CGFloat(sender.value))
+            targetView.frame.size.width = CGFloat(sender.value)
             
         } else {
             
-            changeWidthValue(ntuChildView, to: CGFloat(sender.value))
-        }
-    }
-    
-    func changeWidthValue(_ targetView: UIView, to value: CGFloat) {
-        
-        if frameBoundsSeletor.selectedSegmentIndex == 0 {
-            
-            targetView.frame.size.width = value
-            
-        } else {
-            
-            targetView.bounds.size.width = value
+            targetView.bounds.size.width = CGFloat(sender.value)
         }
     }
     
@@ -110,23 +125,11 @@ class ViewController: UIViewController {
         
         if viewSeletor.selectedSegmentIndex == 0 {
             
-            changeHeightValue(ntuSuperView, to: CGFloat(sender.value))
+            targetView.frame.size.height = CGFloat(sender.value)
             
         } else {
             
-            changeHeightValue(ntuChildView, to: CGFloat(sender.value))
-        }
-    }
-    
-    func changeHeightValue(_ targetView: UIView, to value: CGFloat) {
-        
-        if frameBoundsSeletor.selectedSegmentIndex == 0 {
-            
-            targetView.frame.size.height = value
-            
-        } else {
-            
-            targetView.bounds.size.height = value
+            targetView.bounds.size.height = CGFloat(sender.value)
         }
     }
 }

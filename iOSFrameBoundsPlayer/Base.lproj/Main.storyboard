@@ -48,6 +48,9 @@
                                     <segment title="SuperView"/>
                                     <segment title="ChildView"/>
                                 </segments>
+                                <connections>
+                                    <action selector="syncSliderValueWithTargetView" destination="BYZ-38-t0r" eventType="valueChanged" id="Chb-Qa-2En"/>
+                                </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rwc-kh-mFR">
                                 <rect key="frame" x="253" y="511" width="121" height="29"/>
@@ -55,6 +58,9 @@
                                     <segment title="Frame"/>
                                     <segment title="Bounds"/>
                                 </segments>
+                                <connections>
+                                    <action selector="syncSliderValueWithTargetView" destination="BYZ-38-t0r" eventType="valueChanged" id="6lM-OF-DB9"/>
+                                </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1uh-Ym-yqf">
                                 <rect key="frame" x="20" y="79" width="374" height="402"/>
