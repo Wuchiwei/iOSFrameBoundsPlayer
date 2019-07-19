@@ -89,13 +89,13 @@ class ViewController: UIViewController {
     
     @IBAction func yValueDidChange(_ sender: UISlider) {
         
-        if viewSeletor.selectedSegmentIndex == 0 {
+        if frameBoundsSeletor.selectedSegmentIndex == 0 {
             
             targetView.frame.origin.y = CGFloat(sender.value)
             
         } else {
             
-            targetView.bounds.origin.x = CGFloat(sender.value)
+            targetView.bounds.origin.y = CGFloat(sender.value)
         }
     }
     
@@ -103,7 +103,7 @@ class ViewController: UIViewController {
     
     @IBAction func widthValueDidChange(_ sender: UISlider) {
         
-        if viewSeletor.selectedSegmentIndex == 0 {
+        if frameBoundsSeletor.selectedSegmentIndex == 0 {
             
             targetView.frame.size.width = CGFloat(sender.value)
             
@@ -117,7 +117,7 @@ class ViewController: UIViewController {
     
     @IBAction func heightValueDidChange(_ sender: UISlider) {
         
-        if viewSeletor.selectedSegmentIndex == 0 {
+        if frameBoundsSeletor.selectedSegmentIndex == 0 {
             
             targetView.frame.size.height = CGFloat(sender.value)
             
