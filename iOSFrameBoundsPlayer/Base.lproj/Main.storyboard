@@ -20,15 +20,27 @@
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="Kfx-wT-3zg">
                                 <rect key="frame" x="89" y="574" width="307" height="31"/>
+                                <connections>
+                                    <action selector="xValueDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Zdu-zX-7L0"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="8Zk-4j-83e">
                                 <rect key="frame" x="89" y="635" width="307" height="31"/>
+                                <connections>
+                                    <action selector="yValueDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="a1W-H8-tG5"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="SzY-xx-zy4">
                                 <rect key="frame" x="89" y="696" width="307" height="31"/>
+                                <connections>
+                                    <action selector="widthValueDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="dyF-xr-7Py"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="JMQ-EY-V7d">
                                 <rect key="frame" x="89" y="757" width="307" height="31"/>
+                                <connections>
+                                    <action selector="heightValueDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="vHq-jU-TjP"/>
+                                </connections>
                             </slider>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="00d-Ws-1Lt">
                                 <rect key="frame" x="40" y="511" width="159" height="29"/>
