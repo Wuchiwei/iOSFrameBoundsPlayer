@@ -46,12 +46,6 @@ class ViewController: UIViewController {
         
         syncSliderValueWithTargetView()
     }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        print("viewDidLayoutSubviews")
-    }
     
     @IBAction func syncSliderValueWithTargetView() {
         
